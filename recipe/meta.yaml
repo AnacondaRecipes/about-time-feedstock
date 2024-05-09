@@ -10,16 +10,18 @@ source:
   sha256: 6a538862d33ce67d997429d14998310e1dbfda6cb7d9bbfbf799c4709847fece
 
 build:
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
   number: 0
+  skip: True # [py<37]
 
 requirements:
   host:
-    - python >=3.7,<4.0
+    - python
     - pip
+    - wheel
+    - setuptools
   run:
-    - python >=3.7,<4.0
+    - python
 
 test:
   imports:
@@ -32,8 +34,13 @@ test:
 about:
   home: https://github.com/rsalmei/about-time
   summary: Easily measure timing and throughput of code blocks, with beautiful human friendly representations.
+  description: |
+    A cool helper for tracking time and throughput of code blocks, with beautiful human friendly renditions.
   license: MIT
+  license_family: MIT
   license_file: LICENSE
+  doc_url: https://github.com/rsalmei/about-time
+  dev_url: https://github.com/rsalmei/about-time/blob/main/README.md
 
 extra:
   recipe-maintainers:
