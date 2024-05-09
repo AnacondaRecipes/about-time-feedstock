@@ -39,8 +39,8 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  doc_url: https://github.com/rsalmei/about-time
-  dev_url: https://github.com/rsalmei/about-time/blob/main/README.md
+  dev_url: https://github.com/rsalmei/about-time
+  doc_url: https://github.com/rsalmei/about-time/blob/main/README.md
 
 extra:
   recipe-maintainers:
